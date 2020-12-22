@@ -25,7 +25,6 @@ class CurveView: UIView, CAAnimationDelegate {
         path.addQuadCurve(to: CGPoint(x: width * 0.4, y: height * 0.43), controlPoint: CGPoint(x: self.frame.width, y: height * 0.18))
         path.addQuadCurve(to: CGPoint(x: 0, y: height * 0.86), controlPoint: CGPoint(x: width * 1.26, y: height * 0.55))
         
-        // 그려주는 애니메이션
         let paintAnimation = CABasicAnimation(keyPath: "strokeEnd")
         paintAnimation.fromValue = 0
         paintAnimation.toValue = 1
