@@ -28,14 +28,14 @@ class CurveView: UIView, CAAnimationDelegate {
         let paintAnimation = CABasicAnimation(keyPath: "strokeEnd")
         paintAnimation.fromValue = 0
         paintAnimation.toValue = 1
-        paintAnimation.duration = 3
+        paintAnimation.duration = 2
         paintAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         paintAnimation.delegate = self
         
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = CGFloat(0.75 * Double.pi)
         rotateAnimation.toValue = CGFloat(Double.pi)
-        rotateAnimation.duration = 3
+        rotateAnimation.duration = 2
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
         positionAnimation.path = path.cgPath
@@ -51,7 +51,7 @@ class CurveView: UIView, CAAnimationDelegate {
 
         let animationGroup = CAAnimationGroup()
         animationGroup.animations = [rotateAnimation, positionAnimation]
-        animationGroup.duration = 3
+        animationGroup.duration = 2
         animationGroup.delegate = self
         animationGroup.autoreverses = false
         animationGroup.isRemovedOnCompletion = true
